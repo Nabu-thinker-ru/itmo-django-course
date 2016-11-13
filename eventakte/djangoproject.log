@@ -1,0 +1,318 @@
+2016-11-13 00:29:11,015 [Thread-1] [ERROR] [django.request:284]  Internal Server Error: /
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: base.html
+2016-11-13 00:54:30,988 [Thread-10] [ERROR] [django.request:284]  Internal Server Error: /
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 506, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/loader.py", line 62, in select_template
+    return engine.get_template(template_name, dirs)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 508, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 568, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+2016-11-13 01:16:44,758 [Thread-5] [WARNING] [django.request:182]  Not Found: /asset/css/eventakte.css
+2016-11-13 01:18:52,459 [Thread-1] [WARNING] [django.request:182]  Not Found: /asset/css/eventakte.css
+2016-11-13 01:20:02,122 [Thread-1] [WARNING] [django.request:182]  Not Found: /asset/css/eventakte.css
+2016-11-13 01:21:55,995 [Thread-1] [WARNING] [django.request:182]  Not Found: /static/css/eventakte.css
+2016-11-13 01:40:50,800 [Thread-1] [ERROR] [django.request:284]  Internal Server Error: /
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 204, in render
+    with context.bind_template(self):
+  File "/usr/lib64/python3.4/contextlib.py", line 59, in __enter__
+    return next(self.gen)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/context.py", line 256, in bind_template
+    processors = (template.engine.template_context_processors +
+  File "/www/soc.venv/lib/python3.4/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 105, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 105, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/utils/module_loading.py", line 20, in import_string
+    module = import_module(module_path)
+  File "/www/soc.venv/lib64/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2212, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2224, in _find_and_load_unlocked
+ImportError: No module named 'eventakte.city'
+2016-11-13 01:43:41,689 [Thread-1] [ERROR] [django.request:284]  Internal Server Error: /
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 204, in render
+    with context.bind_template(self):
+  File "/usr/lib64/python3.4/contextlib.py", line 59, in __enter__
+    return next(self.gen)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/context.py", line 256, in bind_template
+    processors = (template.engine.template_context_processors +
+  File "/www/soc.venv/lib/python3.4/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 105, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 105, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/utils/module_loading.py", line 20, in import_string
+    module = import_module(module_path)
+  File "/www/soc.venv/lib64/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2212, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2224, in _find_and_load_unlocked
+ImportError: No module named 'eventakte.city'
+2016-11-13 01:44:03,053 [Thread-1] [ERROR] [django.request:284]  Internal Server Error: /
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 204, in render
+    with context.bind_template(self):
+  File "/usr/lib64/python3.4/contextlib.py", line 59, in __enter__
+    return next(self.gen)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/context.py", line 256, in bind_template
+    processors = (template.engine.template_context_processors +
+  File "/www/soc.venv/lib/python3.4/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 105, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 105, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/utils/module_loading.py", line 20, in import_string
+    module = import_module(module_path)
+  File "/www/soc.venv/lib64/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2224, in _find_and_load_unlocked
+ImportError: No module named 'city.contextproccessor'
+2016-11-13 02:16:09,870 [Thread-14] [WARNING] [django.request:182]  Not Found: /favicon.ico
+2016-11-13 02:16:10,095 [Thread-15] [WARNING] [django.request:182]  Not Found: /favicon.ico
+2016-11-13 02:16:42,406 [Thread-18] [WARNING] [django.request:182]  Not Found: /favicon.ico
+2016-11-13 02:16:42,457 [Thread-19] [WARNING] [django.request:182]  Not Found: /favicon.ico
+2016-11-13 04:58:15,697 [Thread-1] [ERROR] [django.request:284]  Internal Server Error: /
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: basesss.html
+2016-11-13 07:16:04,759 [Thread-8] [ERROR] [django.request:284]  Internal Server Error: /
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/loader.py", line 62, in select_template
+    return engine.get_template(template_name, dirs)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 514, in parse
+    raise self.error(token, e)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 512, in parse
+    compiled_result = compile_func(self, token)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 519, in parse
+    self.unclosed_block_tag(parse_until)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 578, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 11: 'for'. Looking for one of: empty, endfor.
+2016-11-13 09:19:11,574 [Thread-9] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:19:13,499 [Thread-10] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:19:38,470 [Thread-11] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:19:50,892 [Thread-12] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:23:26,997 [Thread-13] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:25:08,546 [Thread-14] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:25:31,666 [Thread-15] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:25:32,781 [Thread-16] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:25:34,899 [Thread-17] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:25:39,588 [Thread-18] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:25:42,346 [Thread-19] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:25:45,009 [Thread-20] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:27:32,336 [Thread-21] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 09:27:57,398 [Thread-22] [WARNING] [django.request:182]  Not Found: /__api/
+2016-11-13 10:27:09,291 [Thread-23] [ERROR] [django.request:284]  Internal Server Error: /
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/loader.py", line 62, in select_template
+    return engine.get_template(template_name, dirs)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 514, in parse
+    raise self.error(token, e)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 512, in parse
+    compiled_result = compile_func(self, token)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 519, in parse
+    self.unclosed_block_tag(parse_until)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 578, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 11: 'for'. Looking for one of: empty, endfor.
+2016-11-13 10:39:38,981 [Thread-28] [ERROR] [django.request:284]  Internal Server Error: /
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 506, in parse
+    compile_func = self.tags[command]
+KeyError: 'endcomment'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/loader.py", line 62, in select_template
+    return engine.get_template(template_name, dirs)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 508, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/www/soc.venv/lib/python3.4/site-packages/django/template/base.py", line 568, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 40: 'endcomment'. Did you forget to register or load this tag?
