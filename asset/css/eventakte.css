@@ -1,6 +1,29 @@
+.b-page__topdecor{
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background-color: #bf360c;
+    z-index: -100;
+}
 .b-page__header {
-    background-color: #dcdcdc;
-    color: #304050;
+    background-color: #bf360c;
+    color: white;
     padding: 1em 0
 }
 
+.city__navlist {
+    background-color: white;
+    box-shadow: 0 0 200px 10px black;
+    padding: 100px;
+    }
+
+.city__ul {list-style: none}
+.city__link{
+    color: #bf360c;
+    display: block;
+    padding: 5px;
+    }
+.city__link--active, .city__link:hover {
+    background-color: #bf360c;
+    color: white;
+}
