@@ -6,8 +6,8 @@ admin.site.register(Country)
 
 
 class CityAdmin(admin.ModelAdmin):
-    list_display = ('__str__', 'show', 'order')
-    list_filter = ('show',)
+    list_display = ('__str__', 'country', 'show', 'order')
+    list_filter = ('show','country')
     search_fields = ('name',)
 
 admin.site.register(City, CityAdmin)

@@ -5,6 +5,9 @@ from city.models import Country, City
 
 def cities(request):
 
-    countries = Country.objects.all()
+    countries = Country.objects.filter(show = True)
+    objects = {}
+    for country in countries:
+        objects[country] = country.cities.filter(show = True)
 
-    return {'countries':countries,}
+    return {'countries': objects,}

@@ -5,9 +5,20 @@ class Country(models.Model):
     name = models.CharField('Название',
                         max_length=150,
                         )
+
+    show = models.BooleanField('Показывать на сайте',
+                        default=True, )
+
+    order = models.IntegerField('Порядок',
+                        default=0)
+
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = 'Страна'
+        verbose_name_plural = 'Страны'
+        ordering = ['order', 'name']
 
 class City(models.Model):
     name = models.CharField('Город',
